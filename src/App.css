@@ -24,18 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .device,
 .device::before,
@@ -96,9 +84,11 @@
 	bottom: 88px;
 }
 .device-iphone-x .device-header {
-	background: rgb(211, 204, 204);
+	background: rgb(60, 29, 231);
 	border-bottom-left-radius: 16px;
 	border-bottom-right-radius: 16px;
+	border: 1px solid #eeeeee;
+	border-top:1px solid rgb(60, 29, 231);
 	height: 24px;
 	left: 50%;
 	margin-left: -82px;
@@ -129,7 +119,7 @@
 	position: absolute;
 }
 .device-iphone-x .device-sensors::after {
-	background: #444;
+	background: #e7e2e2;
 	border-radius: 2.5px;
 	height: 5px;
 	left: 50%;
@@ -138,7 +128,7 @@
 	width: 40px;
 }
 .device-iphone-x .device-sensors::before {
-	background: #444;
+	background: #e7e2e2;
 	border-radius: 50%;
 	height: 11px;
 	left: 50%;

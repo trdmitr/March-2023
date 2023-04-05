@@ -51,5 +51,6 @@ background-color:var(--colorBackgroundAll);
         font-size: 14px; 
         border-radius: .5em;
         cursor: pointer;
+        border: #d3d3ce solid;
         /* z-index: 101; */
     }

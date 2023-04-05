@@ -20,7 +20,7 @@ function NotFound() {
 }
 function App() {
   
-  const urlParse = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSjRPXWSueBmJ9Qae2SinxlY58MWm--PgS_kEukUT3uEPvm9Rhrpuwd2NHRFJZgkdc6n8fJhYKuDT_P/pub?output=csv";
+  const urlParse = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTr20C0VPXynKYsXxAjVWKdFX1icr_6NO-9sd9UmAbrtnYYNtD23fMB83dviQwF6F8-z4M225GEBaCX/pub?output=csv";
   const { data, loading, error } = useFetch(urlParse)
   if(loading) return null
   console.log("data", data )

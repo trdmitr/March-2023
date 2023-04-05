@@ -13,7 +13,7 @@ export const HomePage = () => {
               <div className="device-content">
 
                   <div>
-                      <span className={classes.navLink}>Каверы датам марта 2023 посвящается!</span>
+                      <span className={classes.navLink}>Каверы марта-2023!</span>
                       {/* <Link to={"/cavers21"} className={classes.navLink21}
                       onClick={() => {  handleClick(imgAlt);console.log('Клик!', value); }}                 
                     >2021</Link> */}

@@ -42,8 +42,9 @@
   font-family: 'JakobCTT';
     text-align: center;
     font-size: 1.7em;
-    color: var(--colorText);
-    background-color: var(--buttonBack);
+    font-weight: bold;
+    /* color: var(--colorText); */
+    /* background-color: var(--buttonBack); */
     border-radius: 0.5em;
     border-top-left-radius: 0em;
     border-top-right-radius: 0em;

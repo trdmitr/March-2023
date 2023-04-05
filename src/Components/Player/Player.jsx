@@ -64,7 +64,8 @@ const Player = () => {
     const audioList = useMemo(() => { 
       return  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4, ...audiosongs5, ...audiosongs6]
  .filter(e => e.src !== '');
-}, [songs])
+
+},[songs])
   if (audioList.length === 0) {
     return <div className='loadBlock'><Loader /></div>
   }
