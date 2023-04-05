@@ -9,7 +9,7 @@ import RoundLoader from './Loader/RoundLoader';
 const SinglPage = () => {
   const navigate = useNavigate();
   const params = useParams();
-  const { data, loading, error } = useContext(Context);
+  const { data} = useContext(Context);
   const tzitata = (imgLink) => {
     return (
       <div className={classes.tziTata}>

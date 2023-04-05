@@ -8,7 +8,10 @@ import { Context } from '../context'
 
 const Player = () => {
     const [trackIndex, setTrackIndex] = useState(0)
-    const { data: songs, loading, error } = useContext(Context);
+    const { data: songs, error } = useContext(Context);
+    if (error) {
+      return <div className='loadBlock'><Loader /></div>
+    }
     const audiosongs1 = songs.map((song) => {
         const container = {};
          container.name = song.name;

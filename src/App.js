@@ -1,9 +1,9 @@
 import React from 'react';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import './App.css';
 import { HashRouter as Router, Routes, Route, useLocation, Link } from "react-router-dom";
 import { HomePage } from './Components/HomePage';
-import { CaverPage21 } from './Components/CaverPage21';
+import { CaverPage } from './Components/CaverPage';
 import SinglPage from './Components/SinglPage';
 import { Context } from './Components/context'
 import useFetch from './Components/API/useFetch';
@@ -31,8 +31,8 @@ function App() {
        <Router>
           <Routes>
          <Route exact path="/" element={<HomePage/>} />
-         <Route path="/cavers" element={<CaverPage21/>} />
-         <Route path="/cavers/:id" element={<SinglPage songs = {data} />} /> 
+         <Route path="/cavers" element={<CaverPage/>} />
+         <Route path="/cavers/:id" element={<SinglPage />} /> 
          <Route path="*" element={<NotFound />} />
        </Routes>
        </Router>
