@@ -22,7 +22,13 @@ function App() {
   
   const urlParse = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTr20C0VPXynKYsXxAjVWKdFX1icr_6NO-9sd9UmAbrtnYYNtD23fMB83dviQwF6F8-z4M225GEBaCX/pub?output=csv";
   const { data, loading, error } = useFetch(urlParse)
+  if (error) {
+    return alert(`Ошибка загрузки! ${error.message}`) 
+  }
   if(loading) return null
+  if (data.length === 0) {
+    return null
+  }
   console.log("data", data )
   return (
     <div className="App">
