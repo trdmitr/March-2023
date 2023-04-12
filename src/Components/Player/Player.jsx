@@ -1,32 +1,23 @@
-import React, { useContext, useMemo } from 'react'
+import React from 'react'
 import { useState } from "react";
 import classes from "./Player.module.css"
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import Loader from '../Loader/Loader';
-import { Context } from '../context'
+// import { Context } from '../context'
+
 import usePlaylist from '../Hooks/usePlaylist';
 
 const Player = () => {
   const [trackIndex, setTrackIndex] = useState(0)
-  // const { data: songs, error } = useContext(Context);
-  // if (error) {
-  //   return <div className='loadBlock'><Loader /></div>
-  // }
-  const { audioList, error } = usePlaylist()
-  // if (!audioList) {
-  //   return null
-  // }
-  // console.log("audioList", audioList)
 
+  const { audioList, error } = usePlaylist()
   if (!audioList) {
     return <div className='loadBlock'><Loader /></div>
   }
   if (error) {
     return <h1 className='loadBlock' >Ошибка загрузки!</h1>
   }
-
-
   const handleClickPrevious = () => {
     setTrackIndex((currentTrack) =>
       currentTrack === 0 ? audioList.length - 1 : currentTrack - 1

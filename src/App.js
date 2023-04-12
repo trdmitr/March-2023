@@ -30,6 +30,8 @@ function App() {
     return null
   }
   console.log("data", data )
+  const sliceArr = data.slice(2,5)
+  console.log("SLICE", sliceArr)
   return (
     <div className="App">
       <Fragment>
