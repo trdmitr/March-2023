@@ -10,7 +10,7 @@ import usePlaylist from '../Hooks/usePlaylist';
 
 const Player = () => {
   const [trackIndex, setTrackIndex] = useState(0)
-
+  const counter = React.useRef(0)
   const { audioList, error } = usePlaylist()
   if (!audioList) {
     return <div className='loadBlock'><Loader /></div>
@@ -23,6 +23,7 @@ const Player = () => {
       currentTrack === 0 ? audioList.length - 1 : currentTrack - 1
     );
   };
+  
   const handleClickNext = () => {
     setTrackIndex((currentTrack) =>
       currentTrack < audioList.length - 1 ? currentTrack + 1 : 0

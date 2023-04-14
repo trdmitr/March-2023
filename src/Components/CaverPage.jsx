@@ -10,14 +10,8 @@ import About from './UI/About';
 import PlayButton from './UI/Modal/PlayButton';
 
 export const CaverPage = () => {
-  // const [data, setData] = useState({});
-  // const [songError, setSongError] = useState(false);
-  // const navigate = useNavigate();
   const [modal, setModal] = useState(false);
- 
-  // const urlParse = urlLoc.includes('cavers21') ? urlParse21 : urlLoc.includes('cavers22') ? urlParse22 : urlLoc.includes('cavers23') ? urlParse23 : "";
   const { data: songs, loading, error } = useContext(Context);
-  // const songs = Array.from(data);
   const singContent = useMemo(() => {
     if (loading) {
       return <div className='loadBlock'><RoundLoader /></div>
@@ -61,7 +55,7 @@ export const CaverPage = () => {
               {error ? <h2>Ошибка загрузки!</h2> : ""}
               {singContent}
             </div>
-            <Player songs={songs} />
+            <Player/>
           </div>
           <Link to="/"><button className={classes.btnHome}>Главная</button></Link>
         </div>
